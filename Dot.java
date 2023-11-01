@@ -5,7 +5,7 @@ public class Dot  extends Actor
     private final int DOT_SIZE=20;
     public Dot(int dot)
     {
-        GreenfootImage img = new GreenfootImage("head.gif");
+        GreenfootImage img = new GreenfootImage("snake.png");
         img.mirrorHorizontally();
         d = dot;
         if(d == 0)
@@ -14,7 +14,7 @@ public class Dot  extends Actor
         }
         else
         {
-            setImage("close.png");
+            setImage("dot.png");
         }
     }
     public void act() 
@@ -36,18 +36,18 @@ public class Dot  extends Actor
     {    
         x = getX();
         y = getY();
-        if ((Greenfoot.isKeyDown("left") && (getRotation() != 0)))
+        if ((Greenfoot.isKeyDown("a") && (getRotation() != 0)))
         {
             setRotation(180);
         }
-        else if ((Greenfoot.isKeyDown("right") && (getRotation() != 180)))
+        else if ((Greenfoot.isKeyDown("d") && (getRotation() != 180)))
         {
             setRotation(0);
         }
-        else if ((Greenfoot.isKeyDown("up") && (getRotation() != 90)))
+        else if ((Greenfoot.isKeyDown("w") && (getRotation() != 90)))
         {
             setRotation(270);
-        }else if ((Greenfoot.isKeyDown("down") && (getRotation() != 270)))
+        }else if ((Greenfoot.isKeyDown("s") && (getRotation() != 270)))
         {
             setRotation(90);
         }
